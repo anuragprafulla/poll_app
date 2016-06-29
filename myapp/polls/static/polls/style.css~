@@ -8,5 +8,5 @@ body {
 {
     border: 3px solid black;
     border-radius: 3px;
-    background-color: #dedef8;
+    color: #dedef8
 }
