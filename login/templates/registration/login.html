@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3" style="background-color:#339999;">
+            </div>
+            <div class="col-lg-6" style="background-color:#339999">
+                <div class="row">
+                    <div class="center-block" style="width:100px">
+                        {% load staticfiles %}<img src="{% static 'login/images/polls_logo.png' %}"/>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="center-block" style="width:268px">
+                        <p style="font-family:sans-serif; font-size:24px; font-weight:800">
+                          Sign in to your account
+                        </p>
+                        <br/>
+                    </div>       
+                <div class="row">
+                    <div class="center-block" style="width:350px">
+                        <form method="post" action=".">
+                        {% csrf_token %}
+                            <input id="id_username" name="username" type="text" placeholder="username">
+                            <input id="id_password" name="password" type="password" placeholder="password">
+                            <input type="submit" value="Login" />
+                            <input type="hidden" name="next" value="/home" />
+                        </form>
+                        <p style="font-weight:800; margin-top: 20px">-------------------------------------or-----------------------------------</p>   
+                        <a href="/register"><input value="Create a new account" type="button"/>  </a>
+                    {% if form.errors %}
+                    <p style="font-family:sans-serif; color: #333;">
+Your username and password didn't match. Please try again.</p>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    {% endblock %}
+    
