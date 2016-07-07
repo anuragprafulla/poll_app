@@ -6,16 +6,18 @@
         <div class="row">
             <div class="col-lg-3" style="background-color:#339999;">
             </div>
-            <div class="col-lg-6" style="background-color:#dedef8;">
+            <div class="col-lg-6" style="background-color:#339999;">
                 <div class="row">
                     <div class="center-block" style="width:100px">
-                        {% load staticfiles %}<img src="{% static 'login/images/polls_logo.png' %}"/>
+                        {% load staticfiles %}<img style="margin-top:75px;"src="{% static 'login/images/polls_logo.png' %}"/>
                     </div>
                     <br/>
                     <div class="center-block" style="width:210px">
+                    <center>
                         <p style="font-family:sans-serif; font-size:24px; font-weight:800;">
                             Create an account
                         </p>
+                    </center>
                         <br/>
                     </div>
                     <div class="center-block" style="width:350px">
@@ -27,15 +29,12 @@
                             <input id="id_password1" name="password2" required="True" type="password" placeholder="confirm password"/>
                             <input type="submit" value="Register"/>
                         </form>
+                        </br>
+                        <center>  <p style= "font-color:#333; font-weignt: 700;"> or </p>  </center>
                         <a href="/"><input value="Sign in to your account" type="button"/>
+                        <a href="{% url 'password_change' %}">Change Password</a>
                     </div>
                 </div>
             </div>
-    <form method="post" action=".">{% csrf_token %}
-        <table border="0">
-            {{ form.as_table }}
-        </table>
-        <input type="submit" value="Register" />
-    </form>
-    <a href="/">Login</a>
+    
 {% endblock %}

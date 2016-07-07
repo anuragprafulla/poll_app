@@ -36,7 +36,9 @@ def register_success(request):
 def logout_page(request):
     logout(request)
     return HttpResponseRedirect('/')
- 
+
+
+
 @login_required
 def home(request):
     return render_to_response(
