@@ -8,14 +8,16 @@
             <div class="col-lg-6" style="background-color:#339999">
                 <div class="row">
                     <div class="center-block" style="width:100px">
-                        {% load staticfiles %}<img src="{% static 'login/images/polls_logo.png' %}"/>
+                        {% load staticfiles %}<img style="margin-top:100px;" src="{% static 'login/images/polls_logo.png' %}"/>
                     </div>
                 </div>
                 <br/>
                 <div class="row">
                     <div class="center-block" style="width:268px">
                         <p style="font-family:sans-serif; font-size:24px; font-weight:800">
+                        <center>
                           Sign in to your account
+                        </center>
                         </p>
                         <br/>
                     </div>       
@@ -28,10 +30,12 @@
                             <input type="submit" value="Login" />
                             <input type="hidden" name="next" value="/home" />
                         </form>
-                        <p style="font-weight:800; margin-top: 20px">-------------------------------------or-----------------------------------</p>   
+                        <center><p style="font-weight:800; margin-top: 20px"> OR</p> </center>   
                         <a href="/register"><input value="Create a new account" type="button"/>  </a>
                     {% if form.errors %}
-                    <p style="font-family:sans-serif; color: #333;">Your username and password didn't match. Please try again.</p>
+                    <p style="font-family:sans-serif; color: #333;">
+Your username and password didn't match. Please try again.</p>
+                    {% endif %}
                     </div>
                 </div>
             </div>
@@ -39,6 +43,6 @@
         </div>
     </div>
     
-    {% endif %}
+    
     {% endblock %}
     

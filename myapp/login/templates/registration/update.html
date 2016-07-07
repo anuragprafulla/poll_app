@@ -14,24 +14,21 @@
                     <br/>
                     <div class="center-block" style="width:210px">
                         <p style="font-family:sans-serif; font-size:24px; font-weight:800;">
-                            Create an account
+                            Update password
                         </p>
                         <br/>
                     </div>
                     <div class="center-block" style="width:350px">
-                        <form method="post" action=".">
+                        <form method="post" action="{% url 'account_change_password' %}" class="password_change">
                         {% csrf_token %}
-                            <input id="id_username" name="username" required="True" type="text" placeholder="username"/>
-                            <input id="id_email" name="email" required="True" type="text" placeholder="e-mail"/>
-                            <input id="id_password1" name="password1" required="True" type="password" placeholder="password"/>
-                            <input id="id_password1" name="password2" required="True" type="password" placeholder="confirm password"/>
-                            <input type="submit" value="Register"/>
+                            <input id="id_username" name="username" required="True" type="text" placeholder="Username"/>
+                            <input id="id_password_old" name="old_password" required="True" type="password" placeholder="Old password"/>
+                            <input id="id_password_new" name="new_password1" required="True" type="password" placeholder="New password"/>
+                            <input id="id_conf_pass" name="new_password2" required="True" type="password" placeholder="Confirm password"/>
+                            <input type="submit" value="Submit"/>
                         </form>
-                        <a href="/"><input value="Sign in to your account" type="button"/>
                     </div>
                 </div>
-                <div class="col-lg-3" style="background-color:#339999;">
-                </div>
             </div>
-       
-   {% endblock %}
+    
+{% endblock %}

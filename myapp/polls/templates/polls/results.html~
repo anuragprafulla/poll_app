@@ -23,26 +23,25 @@
                     </div>
                     <hr class="headRule" style="background-color:#003333">
                     <div class="subHead">
-                        <p> Latest questions up for polling </p>
+                        <p> Results of "{{ question.question_text }}" </p>
                     </div>
                     <div class="row">
-                        {% if latest_question_list %}
-                        {% for question in latest_question_list %}
+                        {% for choice in question.choice_set.all %}
                         <div class="queDiv" >
-                            <span >
+                            <span>
                             </br>
-                            <a class="ques"href="{% url 'polls:detail' question.id %}">                            {{question.question_text }} 
-                            </a>
-                            </br></br>
+                            <p class="option"> {{ choice.choice_text }} - {{ choice.votes }} vote{{choice.votes|pluralize }} </p>
+                            </br>
                             </span>
                         </div>
                         {% endfor %}
-                        {% else %}
-                        <div class="center-block" style="width:90%">
-                        <p style="font-size:25px; color: #333">No polls are available
-                        </p>
-                        {% endif %}
                     </div>
+                    <div class="row">
+                       <div class="center-block" style="width: 328px; margin-top:30px">
+                           <a href="{% url 'polls:detail' question.id %}"><input type="button" style="color:#fff; background-color:#333; width:150px; height: 40px; border:none;" value="Vote Again?"></a>
+                           <a href="/logout/"><input type="button" style="color:#fff; background-color:#333; width:150px; height: 40px; margin-left:24px; border:none;" value="Logout"></a>
+                       </div>
+                   </div>
                 </div>
                 <div class="col-lg-2" style="background-color:#339999;height:100px; height:100px">  
                 </div>
@@ -51,5 +50,3 @@
                 
                 
                         
-
-
