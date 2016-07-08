@@ -1,0 +1,65 @@
+<<<<<<< HEAD
+<h1>
+    {{question.question_text }}
+</h1>
+<ul>
+{% for choice in question.choice_set.all %}
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote {{ choice.votes|pluralize }} </li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+=======
+<! DOCTYPE html>
+<html>
+    <head>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css'  %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/bootstrap.min.css' %}"/>
+        <script src="{% static 'polls/jquery-3.0.0.min.js' %}"></script>
+        
+    </head>
+    <body  style="background-color:#339999;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="center-block" style="width:500px">
+                        {% load staticfiles%}
+                            <img class="logo" src="{%static 'polls/images/polls_logo.png' %}" />
+                            <div class="appName"> Polls Application
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="headRule" style="background-color:#003333">
+                    <div class="subHead">
+                        <p> Results for "{{ question.question_text }}" </p>
+                    </div>
+                    <div class="row">
+                        {% for choice in question.choice_set.all %}
+                        <div class="queDiv" >
+                            <span>
+                            </br>
+                            <p class="option"> {{ choice.choice_text }} - {{ choice.votes }} vote{{choice.votes|pluralize }} </p>
+                            </br>
+                            </span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="row">
+                       <div class="center-block" style="width: 328px; margin-top:30px">
+                           <a href="{% url 'polls:detail' question.id %}"><input type="button" style="color:#fff; background-color:#333; width:150px; height: 40px; border:none;" value="Vote Again?"></a>
+                           <a href="/logout/"><input type="button" style="color:#fff; background-color:#333; width:150px; height: 40px; margin-left:24px; border:none;" value="Logout"></a>
+                       </div>
+                   </div>
+                </div>
+                <div class="col-lg-2" style="background-color:#339999;height:100px; height:100px">  
+                </div>
+    </body>
+</html>
+                
+                
+                        
+>>>>>>> acc6295766e03a8c4ac6ecddeb4990019441b8df

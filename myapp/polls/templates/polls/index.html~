@@ -1,0 +1,59 @@
+<! DOCTYPE html>
+<html>
+    <head>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css'  %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/bootstrap.min.css' %}"/>
+        <script src="{% static 'polls/jquery-3.0.0.min.js' %}"></script>
+        <script>
+            $(document).ready(function(){
+            $(".queDiv").focusin(function(){
+            $(this).css("background-color:", "#ecf9f9"); });});
+        </script>
+    </head>
+    <body  style="background-color:#339999;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="center-block" style="width:500px">
+                        {% load staticfiles%}
+                            <img class="logo" src="{%static 'polls/images/polls_logo.png' %}" />
+                            <div class="appName"> Polls Application
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="headRule" style="background-color:#003333">
+                    <div class="subHead">
+                        <p> Latest questions up for polling </p>
+                    </div>
+                    <div class="row">
+                        {% if latest_question_list %}
+                        {% for question in latest_question_list %}
+                        <div class="queDiv" >
+                            <span >
+                            </br>
+                            <a class="ques"href="{% url 'polls:detail' question.id %}">                            {{question.question_text }} 
+                            </a>
+                            </br></br>
+                            </span>
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        <div class="center-block" style="width:90%">
+                        <p style="font-size:25px; color: #333">No polls are available
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-lg-2" style="background-color:#339999;height:100px; height:100px">  
+                </div>
+    </body>
+</html>
+                
+                
+                        
+
+

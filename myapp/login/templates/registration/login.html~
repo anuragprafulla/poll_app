@@ -28,7 +28,7 @@
                             <input type="submit" value="Login" />
                             <input type="hidden" name="next" value="/home" />
                         </form>
-                        <p style="font-weight:800; margin-top: 20px">-------------------------------------or-----------------------------------</p>   
+                        <center><p style="font-weight:800; margin-top: 20px"> OR</p> </center>   
                         <a href="/register"><input value="Create a new account" type="button"/>  </a>
                     {% if form.errors %}
                     <p style="font-family:sans-serif; color: #333;">

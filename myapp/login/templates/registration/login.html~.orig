@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3" style="background-color:#339999;">
+            </div>
+<<<<<<< HEAD
+            <div class="col-lg-6" style="background-color:#339999;">
+                <div class="row">
+                    <div class="center-block" style="width:100px;">
+                        {% load staticfiles %}<img src="{% static 'login/images/polls_logo.png' %}"/>
+=======
+            <div class="col-lg-6" style="background-color:#339999">
+                <div class="row">
+                    <div class="center-block" style="width:100px">
+                        {% load staticfiles %}<img style="margin-top:100px;" src="{% static 'login/images/polls_logo.png' %}"/>
+>>>>>>> acc6295766e03a8c4ac6ecddeb4990019441b8df
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="center-block" style="width:268px">
+<<<<<<< HEAD
+                        <p style="font-family:sans-serif; font-size:24px; font-weight:800">
+                          Sign in to your account
+                        </p>
+=======
+                        <center>
+                        <p style="font-family:sans-serif; font-size:24px; font-weight:800">
+                          Sign in to your account
+                        </p>
+                        </center>
+>>>>>>> acc6295766e03a8c4ac6ecddeb4990019441b8df
+                        <br/>
+                    </div>       
+                <div class="row">
+                    <div class="center-block" style="width:350px">
+                        <form method="post" action=".">
+                        {% csrf_token %}
+                            <input id="id_username" name="username" type="text" placeholder="username">
+                            <input id="id_password" name="password" type="password" placeholder="password">
+                            <input type="submit" value="Login" />
+                            <input type="hidden" name="next" value="/home" />
+                        </form>
+<<<<<<< HEAD
+                        <p style="font-weight:800; margin-top: 20px">-------------------------------------or-----------------------------------</p>   
+=======
+                        <center><p style="font-weight:800; margin-top: 20px"> OR</p> </center>   
+>>>>>>> acc6295766e03a8c4ac6ecddeb4990019441b8df
+                        <a href="/register"><input value="Create a new account" type="button"/>  </a>
+                    {% if form.errors %}
+                    <p style="font-family:sans-serif; color: #333;">
+Your username and password didn't match. Please try again.</p>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    {% endblock %}
+    
