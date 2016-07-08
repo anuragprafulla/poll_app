@@ -21,12 +21,12 @@ SECRET_KEY = '%0t!vudvv84oi5e58*m*)gqpkdpu*b1h%pggx(*$ea^ypmgkzn'
 
 
 import django.contrib.auth
-django.contrib.auth.LOGIN_URL = '/login/'
+django.contrib.auth.LOGIN_URL = '/'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 TEMPLATE_DEBUG = True
-
+TEMPLATE_DIRS = [os.path.join(BASE_DIR,'templates')]
 ALLOWED_HOSTS = []
 
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'login',
+    'polls',
 )
 
 MIDDLEWARE_CLASSES = (

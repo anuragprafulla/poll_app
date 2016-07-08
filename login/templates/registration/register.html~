@@ -1,21 +1,23 @@
 {% extends "base.html" %}
-{% block title %}User Registration{% endblock %}
+{% block title %}Sign Up{% endblock %}
 
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col-lg-3" style="background-color:#339999;">
+            <div class="col-lg-3">
             </div>
-            <div class="col-lg-6" style="background-color:#339999;">
+            <div class="col-lg-6">
                 <div class="row">
                     <div class="center-block" style="width:100px">
                         {% load staticfiles %}<img style="margin-top:75px;"src="{% static 'login/images/polls_logo.png' %}"/>
                     </div>
                     <br/>
                     <div class="center-block" style="width:210px">
-                        <p style="font-family:sans-serif; font-size:24px; font-weight:800;">
+                    <center>
+                        <p class="auth_head">
                             Create an account
                         </p>
+                    </center>
                         <br/>
                     </div>
                     <div class="center-block" style="width:350px">
@@ -27,10 +29,9 @@
                             <input id="id_password1" name="password2" required="True" type="password" placeholder="confirm password"/>
                             <input type="submit" value="Register"/>
                         </form>
-                        </br>
-                        <center>  <p style= "font-color:#333; font-weignt: 700;"> or </p>  </center>
+                        <center>  <p class="or_text"> OR </p>  </center>
                         <a href="/"><input value="Sign in to your account" type="button"/>
-                        <a href="{% url 'password_change' %}">Change Password</a>
+                        <!--<a href="{% url 'password_change' %}">Change Password</a>-->
                     </div>
                 </div>
             </div>
