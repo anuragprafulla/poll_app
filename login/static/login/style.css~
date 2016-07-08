@@ -22,7 +22,7 @@ img
  {
      margin-top: 100px;
  }
-.sign_in_head
+.auth_head
  {
      font-family:sans-serif; font-size:24px; font-weight:800;
  }
@@ -33,4 +33,22 @@ img
 .error_text
  {
     font-family:sans-serif; color: #333;
+ }
+.welcome
+ {
+    color:#333; font-family:sans-serif; font-size:28px;
+ }
+.user_name
+ {
+    color:#fff; font-family:sans-serif; font-size:36px;
+ }
+.home_body
+ {
+    background-color:#fff; 
+    border:none;
+    border-radius:5px;
+ } 
+.app_redirect
+ {
+    color:#333; font-family:sans-serif; font-size:36px; margin-bottom:50px;
  }
