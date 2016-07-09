@@ -50,5 +50,9 @@ img
  } 
 .app_redirect
  {
-    color:#333; font-family:sans-serif; font-size:36px; margin-bottom:50px;
+    color:#333; font-family:sans-serif; font-size:36px; margin-bottom:50px; margin-top:30px;
+ }
+.password_change_text
+ {
+    color:#333; font-family:sans-serif; font-size:26px; margin-top:25px;
  }

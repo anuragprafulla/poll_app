@@ -23,7 +23,7 @@
                     </div>
                     <hr class="headRule" style="background-color:#003333">
                     <div class="subHead">
-                        <p> Results of "{{ question.question_text }}" </p>
+                        <p> Results for "{{ question.question_text }}" </p>
                     </div>
                     <div class="row">
                         {% for choice in question.choice_set.all %}
@@ -38,8 +38,8 @@
                     </div>
                     <div class="row">
                        <div class="center-block" style="width: 328px; margin-top:30px">
-                           <a href="{% url 'polls:detail' question.id %}"><input type="button" style="color:#fff; background-color:#333; width:150px; height: 40px; border:none;" value="Vote Again?"></a>
-                           <a href="/logout/"><input type="button" style="color:#fff; background-color:#333; width:150px; height: 40px; margin-left:24px; border:none;" value="Logout"></a>
+                           <a href="{% url 'polls:detail' question.id %}"><input class="button_left" type="button" value="Vote Again?"></a>
+                           <a href="/logout/"><input type="button_right" value="Logout"></a>
                        </div>
                    </div>
                 </div>

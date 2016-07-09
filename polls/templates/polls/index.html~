@@ -5,13 +5,9 @@
         <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css'  %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'polls/bootstrap.min.css' %}"/>
         <script src="{% static 'polls/jquery-3.0.0.min.js' %}"></script>
-        <script>
-            $(document).ready(function(){
-            $(".queDiv").focusin(function(){
-            $(this).css("background-color:", "#ecf9f9"); });});
-        </script>
+        
     </head>
-    <body  style="background-color:#339999;">
+    <body>
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
@@ -25,7 +21,7 @@
                             </div>
                         </div>
                     </div>
-                    <hr class="headRule" style="background-color:#003333">
+                    <hr class="headRule">
                     <div class="subHead">
                         <p> Latest questions up for polling </p>
                     </div>
@@ -48,7 +44,7 @@
                         {% endif %}
                     </div>
                 </div>
-                <div class="col-lg-2" style="background-color:#339999;height:100px; height:100px">  
+                <div class="col-lg-2">  
                 </div>
     </body>
 </html>
