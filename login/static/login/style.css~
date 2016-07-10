@@ -54,5 +54,5 @@ img
  }
 .password_change_text
  {
-    color:#333; font-family:sans-serif; font-size:26px; margin-top:25px;
+    color:#333; font-family:sans-serif; font-size:26px; margin-top:30%;
  }

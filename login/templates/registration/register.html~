@@ -27,11 +27,15 @@
                             <input id="id_email" name="email" required="True" type="text" placeholder="e-mail"/>
                             <input id="id_password1" name="password1" required="True" type="password" placeholder="password"/>
                             <input id="id_password1" name="password2" required="True" type="password" placeholder="confirm password"/>
+                            {% if form.errors %}
+                            <p class="error_text">
+                                {{ form.errors}}
+                            </p>
+                            {% endif %}
                             <input type="submit" value="Register"/>
                         </form>
                         <center>  <p class="or_text"> OR </p>  </center>
                         <a href="/"><input value="Sign in to your account" type="button"/>
-                        <!--<a href="{% url 'password_change' %}">Change Password</a>-->
                     </div>
                 </div>
             </div>

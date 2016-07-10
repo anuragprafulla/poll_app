@@ -11,5 +11,5 @@
         <p style="font-size:18px; font-face:sans-serif; font-color:#333">
     Thank you for registering.
         </p>
-    <a href="/"><input value="Please Sign In" type="button" style="margin-left:20px"/>
+    <a href="/"><input value="Sign in to your account" type="button" style="margin-left:20px"/>
 {% endblock %}
